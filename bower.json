@@ -1,0 +1,22 @@
+{
+  "name": "geoponics",
+  "description": "Horitculture Site",
+  "main": "index.js",
+  "authors": [
+    "kaiforward <kaiforward123@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kaiforward/Geoponics",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  }
+}
