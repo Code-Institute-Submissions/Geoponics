@@ -1,0 +1,263 @@
+/*--------------------------------PAGE RULES --------------------------------*/
+
+html {font-family: "Source Sans Pro", Sans-Serif; font-size: 12px; font-weight: 200;}
+body {font-family: "Source Sans Pro", Sans-Serif; font-size: 12px; font-weight: 200;background-color: rgb(176,255,133);}
+
+h1 {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0;}
+h2 {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0;}
+p {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0;}
+
+a {text-decoration: none;}
+
+div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
+
+/*--------------------------------ELEMENTS ----------------------------------*/
+
+#pagecontainer {
+	background-color: rgba(236,236,236,1);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.unhighlight {
+	transition: opacity 0.6s;
+	opacity: 0;
+	-webkit-transition: opacity 0.6s;
+	-webkit-opacity: 0;
+	visibility: hidden; 
+
+}
+
+.highlight {
+	transition: opacity 0.6s;
+	opacity: 1;
+	-webkit-transition: opacity 0.6s;
+	-webkit-opacity: 1;
+	visibility: visible;
+}
+
+
+/*---------------------------------NAVIGATION------------------------------*/
+
+#navcontain {
+	-webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	box-sizing:border-box;
+
+	width: 100%;
+	z-index: 10;
+	background-color: white;
+
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+#titleholder {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#title {
+	padding: 2%;
+	margin-top: 2%;
+	margin-bottom: 2%; 
+	max-width: 90%;
+}
+
+/*----------------BelongTogether-----------------------*/
+/* ANIMATION */
+@keyframes titleanimation {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+#titleanim {
+	animation-name: titleanimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+	height: 100%;
+	background-color: rgba(236,236,236,1);
+	position: absolute;
+	z-index: -10;
+}
+/*-----------------------------------------------------*/
+
+/*----------------BelongTogether-----------------------*/
+/* ANIMATION */
+@keyframes titleanimationtwo {
+    from {width: 0%;}
+    to {width: 95%;}
+}
+
+#titleanim2 {
+	animation-name: titleanimationtwo;
+    animation-duration: 1.9s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+	height: 100%;
+	background-color: white;
+	position: absolute;
+	z-index: -10;
+}
+/*-----------------------------------------------------*/
+
+#headline {
+	font-size: 3rem;
+}
+
+#navbutton{
+	/*remove default button style*/
+	margin      : 0;
+	padding     : 0;
+	border      : 0;
+	background  : transparent;
+	font-family : inherit;
+	font-size   : 1em;
+
+	/*my button styling*/
+	display: block;
+  	visibility: visible;
+	position: absolute;
+	left: 5%;
+}
+
+#navbutton::-moz-focus-inner{
+	/*remove mozilla default styling*/
+	padding : 0;
+	border  : 0;
+}
+
+#linkposition {
+	/*contains the .linksholder and its position is relative to maintain .linksholder's pageflow within a flex container*/
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.linksholder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	z-index: 10;
+	text-align: center;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: solid white 3px;
+}
+
+.linkBckgrnd {
+	background-color: rgba(236,236,236,0.8);
+}
+
+.navelement {
+	font-size: 2.3rem;
+	padding: 1%;
+	flex:1;
+	color: black;
+}
+
+/*---------------------------------BOOTSTRAP CLASS/ID------------------------------*/
+
+.glyphicon-menu-hamburger {
+	top: 3px;
+	font-size: 2.5rem;
+}
+
+
+/*----------------------------------HOMEPAGE---------------------------------------*/
+
+.centercontainer { /*container that centers content*/
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(236,236,236,0);
+}
+
+.rowcolcontainer { /*container that arranges content in rows for desktop and columns for mobile*/
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	font-size: 0;
+}
+
+.centerbox { /*boxes for holding content contained in center containers*/
+	margin-top: 45px;
+	margin-bottom: 45px;
+	width: 60%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.abscontainercolumn { /*absolutely positioned box for content that sits above fixed size images*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	background-color: rgba(236,236,236,0);
+	border-radius: 10px;
+	width: 60%; 
+	z-index: 1;
+}
+
+.textbox { /*class for adding large information text*/
+
+	background-color: rgba(236,236,236,1);
+	border-radius: 10px;
+	margin:10px;
+	padding:4px;
+	font-size: 1.3rem;
+	text-align: center;
+
+}
+
+.textsmall { /*make text smaller add class before textbox*/
+	font-size: 0.8rem;
+}
+
+.divider {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: white;
+	position: absolute;
+	z-index: 10;
+}
+
+#backgroundimg {
+	display: flex;
+	width: 100%;
+}
+
+.box1 { /*div to go inside flex containers that will always try take up 100%, but multiples will share the space, good for some applications*/
+	width: 100%;
+}
+
+.pic { /*so all img's fill containers*/
+	width: 100%;
+}
+
+.margin { /*add a margin to an object*/
+	margin: 2px;
+}
+

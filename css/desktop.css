@@ -1,0 +1,117 @@
+@media only screen and (min-width: 767px) {
+
+/*-----------------------Navigation--------------------------------------*/
+
+	#contentcontainer {
+		width: 85%;
+	}
+
+	#title {
+		flex: 1;
+	}
+
+	#titleanim {
+		/*visibility: hidden;*/
+		margin-left: 31.25%;
+	}
+	#titleanim2 {
+		/*visibility: hidden;*/
+		margin-left: 31.25%;
+	}
+
+	@keyframes titleanimationtwo {
+	    from {width: 0%;}
+	    to {width: 98%;}
+	}
+
+	#navcontain {
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
+	#navbutton {
+	visibility: hidden;
+	}
+
+	.linksholder {
+		flex-direction:  row;
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		align-items: center;
+		border: none;
+	}
+
+	.linkBckgrnd {
+		background-color: rgba(236,236,236,0);
+	}
+
+/*-----------------------Photoboxes-------------------------------------*/
+
+	#photocontainer {
+		width: 85%;
+	}
+
+	.photobox {
+		width: 25%;
+	}
+
+	.phototext {
+		width: 20%;
+	}
+
+	.objectlarge {
+		width: 50%;
+		font-size: 3rem;
+	}
+
+	.textlarge {
+		width: 45%;
+		font-size: 3rem;
+	}
+
+
+/*-----------------------homepage-------------------------------------*/	
+
+#backgroundimg {
+}
+
+/*.centercontainer {
+	width: 85%;
+}*/
+
+.rowcolcontainer {
+	flex-direction: row;
+}
+
+.centerbox {
+	width:70%;
+	margin-top: 90px;
+	margin-bottom: 90px;
+}
+
+.abscontainercolumn {
+	width: 70%;
+}
+
+.textbox {
+	font-size: 3.5rem;
+}
+
+.textsmall {
+	font-size: 2.5rem;
+}
+
+.divider {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+
+.margin {
+	margin: 4px;
+}
+
+}

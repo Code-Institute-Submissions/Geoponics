@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app='Geoponics'>
+<head>
+    <base href="/"> <!-- needed for Angular HTML 5 mode -->
+    <title>Geoponics</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/desktop.css">
+    <link rel="stylesheet" type="text/css" href="css/largedesktop.css">
+    <link rel="stylesheet" type="text/css" href="css/tiny.css">
+        
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400&amp;subset=latin-ext,vietnamese" rel="stylesheet"> <!-- Contains info on what weight fonts can have + languages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+</head>
+<body>
+
+    <div id="pagecontainer">
+
+        <nav id="navcontain">
+
+                <div id="titleholder">
+                <div id="titleanim"></div> <!-- ANIMATIONS -->
+                <div id="titleanim2"></div> <!-- ANIMATIONS -->
+                <button id="navbutton"><span class="glyphicon glyphicon-menu-hamburger"></span></button> 
+                <div id="title"> <h1 id="headline">Geoponics</h1>  </div>
+            
+            </div>
+
+            <div id="linkposition"> <!-- this div is necessary to position the absolutely positioned linksholder below the title -->
+                <div class="linksholder unhighlight">
+                    <a href="/" class="navelement">Home</a>
+                    <a href="/gallery" class="navelement">Gallery</a>
+                    <a href="/projects" class="navelement">Projects</a>
+                </div>
+            </div>
+
+            <!-- the links holder is abolsutely positioned so it will appear above the below content when menu is pressed, its position is defined by being inside a container that has position relative and that is contained inside the navcontain with flex-direction column. -->
+
+        </nav>
+
+    </div>
+
+    <div style="height:1000px"></div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="site.js/nav-jquery.js"></script>
+</body>
+</html>
