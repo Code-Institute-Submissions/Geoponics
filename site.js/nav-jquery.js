@@ -16,3 +16,10 @@ $("#navbutton").on("click", function(){
 	}
 
 });
+
+$('.navelement').on('click', function(){
+
+	$(".linksholder").addClass("unhighlight");
+	$(".linksholder").removeClass("highlight linkBckgrnd");
+
+});

@@ -24,10 +24,13 @@
 
         <nav id="navcontain">
 
-                <div id="titleholder">
-                <div id="titleanim"></div> <!-- ANIMATIONS -->
-                <div id="titleanim2"></div> <!-- ANIMATIONS -->
+            <div id="titleholder">
+
+                <div id="titleanim"></div>
+                <div id="titleanim2"></div>
+
                 <button id="navbutton"><span class="glyphicon glyphicon-menu-hamburger"></span></button> 
+                
                 <div id="title"> <h1 id="headline">Geoponics</h1>  </div>
             
             </div>
@@ -37,18 +40,21 @@
                     <a href="/" class="navelement">Home</a>
                     <a href="/gallery" class="navelement">Gallery</a>
                     <a href="/projects" class="navelement">Projects</a>
+                    <a href="/projects" class="navelement">Workshops</a>
                 </div>
             </div>
 
             <!-- the links holder is abolsutely positioned so it will appear above the below content when menu is pressed, its position is defined by being inside a container that has position relative and that is contained inside the navcontain with flex-direction column. -->
 
         </nav>
-
+        
     </div>
-
-    <div style="height:1000px"></div>
+    
+    <div ng-view>
+    </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="site.js/nav-jquery.js"></script>
+<script src="site.js/site.js"></script>
 </body>
 </html>

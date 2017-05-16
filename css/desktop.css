@@ -2,7 +2,7 @@
 
 /*-----------------------Navigation--------------------------------------*/
 
-	#contentcontainer {
+	.contentcontainer {
 		width: 85%;
 	}
 
@@ -32,7 +32,11 @@
 	}
 
 	#navbutton {
-	visibility: hidden;
+		visibility: hidden;
+	}
+
+	#headline {
+		font-size: 4rem;
 	}
 
 	.linksholder {
@@ -47,6 +51,10 @@
 	.linkBckgrnd {
 		background-color: rgba(236,236,236,0);
 	}
+
+	.navelement {
+		margin-right: 20px;
+}
 
 /*-----------------------Photoboxes-------------------------------------*/
 
@@ -87,9 +95,13 @@
 }
 
 .centerbox {
-	width:70%;
+	width: 100%;
 	margin-top: 90px;
 	margin-bottom: 90px;
+}
+
+.box1 {
+	width: 100%;
 }
 
 .abscontainercolumn {
@@ -98,6 +110,8 @@
 
 .textbox {
 	font-size: 3.5rem;
+	padding: 30px;
+	margin: 10px;
 }
 
 .textsmall {
