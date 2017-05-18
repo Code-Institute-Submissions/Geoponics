@@ -7,29 +7,29 @@ angular.module('RouteControllers', [])
 		// var IMAGES = ['images/p1.jpg','images/p2.jpg'];
 		// console.log(IMAGES);
 
-		// for (var i = 1; i < 17; i++) {
-		// 	console.log(i);	
-		// 	$('.anewbox').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-		// }
+		for (var i = 1; i < 17; i++) {
+			console.log(i);	
+			$('.anewbox').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
+		}
 		// ^^ this places all the photos from images inside one container, 17 is the number of images in the folder ^^
 		// +1 so this needs to be updated if more pictures are added. Need something else to read folder contents.
 
-		for (var i = 1; i < 17; i = i + 4) {
-			console.log(i);	
-			$('#c1').append(`<img src="images/p${i}.jpg" class="pic">`);
-		}
-		for (var i = 2; i < 17; i = i + 4) {
-			console.log(i);	
-			$('#c2').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-		}
-		for (var i = 3; i < 17; i = i + 4) {
-			console.log(i);	
-			$('#c3').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-		}
-		for (var i = 4; i < 17; i = i + 4) {
-			console.log(i);	
-			$('#c4').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-		}
+		// for (var i = 1; i < 17; i = i + 4) {
+		// 	console.log(i);	
+		// 	$('#c1').append(`<img src="images/p${i}.jpg" class="pic">`);
+		// }
+		// for (var i = 2; i < 17; i = i + 4) {
+		// 	console.log(i);	
+		// 	$('#c2').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
+		// }
+		// for (var i = 3; i < 17; i = i + 4) {
+		// 	console.log(i);	
+		// 	$('#c3').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
+		// }
+		// for (var i = 4; i < 17; i = i + 4) {
+		// 	console.log(i);	
+		// 	$('#c4').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
+		// }
 		//^^ this places the <img> tags in each column (#c1/2/3/4) and divides them equally. it assigns photos ^^ 
 		// a numberical value which corresponds with a number i gave each .jpg in the file directory. Hopefully
 		// this would lessen the coding necessary considerably if adding hundereds of photos.
