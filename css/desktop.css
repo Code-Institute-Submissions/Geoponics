@@ -58,14 +58,6 @@
 
 /*-----------------------Photoboxes-------------------------------------*/
 
-	#photocontainer {
-		width: 85%;
-	}
-
-	.photobox {
-		width: 25%;
-	}
-
 	.phototext {
 		width: 20%;
 	}
@@ -109,13 +101,13 @@
 }
 
 .textbox {
-	font-size: 3.5rem;
+	font-size: 3rem;
 	padding: 30px;
 	margin: 10px;
 }
 
 .textsmall {
-	font-size: 2.5rem;
+	font-size: 2.3rem;
 }
 
 .divider {
@@ -126,6 +118,29 @@
 
 .margin {
 	margin: 4px;
+}
+
+/*---------------------------------GALLERY PAGE------------------------------*/
+
+/*.photocontainer {
+	display:grid;
+	width: 100%;
+	grid-template-columns: repeat(4 ,1fr);
+	grid-template-rows: auto;
+}*/
+
+#c1{} #c2{} #c3{display:flex;} #c4{display:none;}
+
+.pic {
+	width:100%;
+	padding:2px 2px 2px 2px;
+}
+
+.photocolumn {
+	display: flex;
+	flex-direction: column;
+	transition: width 1s;
+	width: 33%;
 }
 
 }

@@ -1,4 +1,4 @@
-angular.module('Geoponics', ['ngRoute']);
+angular.module('Geoponics', ['ngRoute', 'RouteControllers']);
  
 angular.module('Geoponics').config(function($locationProvider, $routeProvider) {
     $locationProvider.html5Mode(true);  // Enable href routing without hashes
@@ -8,7 +8,7 @@ angular.module('Geoponics').config(function($locationProvider, $routeProvider) {
         // , controller: 'HomeController'
     })
     .when('/gallery', {
-        templateUrl: 'templates/gallery.html'
-        // , controller: 'HomeController'
+        templateUrl: 'templates/gallery.html', 
+        controller: 'GalleryController'
     });
 });

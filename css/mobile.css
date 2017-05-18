@@ -1,7 +1,7 @@
 /*--------------------------------PAGE RULES --------------------------------*/
 
 html {font-family: "Source Sans Pro", Sans-Serif; font-size: 12px; font-weight: 200;}
-body {font-family: "Source Sans Pro", Sans-Serif; font-size: 12px; font-weight: 200;/*background-color: rgb(176,255,133);*/}
+body {font-family: "Source Sans Pro", Sans-Serif; font-size: 12px; font-weight: 200; min-width:300px;/*background-color: rgb(176,255,133);*/}
 
 h1 {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0;}
 h2 {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0;}
@@ -14,7 +14,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 
 /*--------------------------------ELEMENTS ----------------------------------*/
 
-#pagecontainer {
+.pagecontainer {
 	background-color: rgba(236,236,236,1);
 	display: flex;
 	flex-direction: column;
@@ -29,7 +29,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 }
 
 .contentcontainer {
-	width: 100%;	
+	width: 95%;	
 	animation-name: pageload;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
@@ -249,15 +249,15 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 
 	background-color: rgba(236,236,236,1);
 	border-radius: 10px;
-	margin:10px;
+	margin:5px;
 	padding:8px;
-	font-size: 1.3rem;
+	font-size: 1.9rem;
 	text-align: center;
 
 }
 
 .textsmall { /*make text smaller add class before textbox*/
-	font-size: 0.8rem;
+	font-size: 1.3rem;
 }
 
 .divider { /*my white circle page divider*/
@@ -283,6 +283,56 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 }
 
 .margin { /*add a margin to an object*/
-	margin: 2px;
+	margin: 1px;
 }
+
+/*---------------------------------GALLERY PAGE------------------------------*/
+
+/*.photocontainer {
+	display:grid;
+	width: 100%;
+	grid-template-columns: repeat(2 ,1fr);
+	grid-template-rows:auto;
+}*/
+#c1{} #c2{} #c3{display:none;} #c4{display:none;}
+
+#photocontainer {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+}
+
+.pic {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	width: 100%;
+	padding:2px 2px 2px 2px;
+	display: flex;
+
+	animation-name: photoload;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes photoload {
+    from {opacity: 0;}
+    to {opacity: 1;}
+} /*makes photos fade in on creation*/
+
+.photocolumn {
+/*	flex:1;*/
+	/*flex-grow: 1;*/
+	transition: width 1s;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+
 

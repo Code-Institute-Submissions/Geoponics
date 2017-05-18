@@ -4,4 +4,18 @@
 		font-size: 2.3rem;
 	}
 
+/*	#c1 {
+		transition: flex 2s;
+		flex: 2;
+	}*/
+
+	#c1{} #c2{} #c3{display:flex;} #c4{display:flex;}
+
+	.photocolumn {
+	display: flex;
+	flex-direction: column;
+	transition: width 1s;
+	width: 25%;
+}
+
 }

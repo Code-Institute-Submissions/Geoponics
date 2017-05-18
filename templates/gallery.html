@@ -2,43 +2,47 @@
 <head>
 	<title>Gallery</title>
 
-	<style type="text/css">
-
-	.pagewrapper {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.photocontainer {
-		display:grid;
-		width: 80%;
-		grid-template-columns: repeat(4 ,1fr);
-		grid-template-rows: auto;
-	}
-
-	.pic {
-		width:100%;
-	}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="css/desktop.css">
+	<link rel="stylesheet" type="text/css" href="css/largedesktop.css">
+	<link rel="stylesheet" type="text/css" href="css/tiny.css">
 
 </head>
 
 <body>
-	<div class="contentcontainer">
-		<div class="pagewrapper">
-			<div class="photocontainer">
-				<img class="pic" src="images/p1.jpg">
-				<img class="pic" src="images/p2.jpg">
-				<img class="pic" src="images/p3.jpg">
-				<img class="pic" src="images/p4.jpg">
-				<img class="pic" src="images/p5.jpg">
-				<img class="pic" src="images/p6.jpg">
-				<img class="pic" src="images/p7.jpg">
-				<img class="pic" src="images/p8.jpg">
+	<div class="pagecontainer">
+		<div class="contentcontainer">
+
+		<div class="anewbox"></div>
+
+			<div id="photocontainer">
+				<div id="c1" class="photocolumn">
+					<!-- <img class="pic" src="images/p1.jpg">
+					<img class="pic" src="images/p10.jpg">
+					<img class="pic" src="images/p3.jpg">
+					<img class="pic" src="images/p4.jpg"> -->
+				</div>
+				<div id="c2" class="photocolumn">	
+					<!-- <img class="pic" src="images/p11.jpg">
+					<img class="pic" src="images/p5.jpg">
+					<img class="pic" src="images/p7.jpg">
+					<img class="pic" src="images/p14.jpg"> -->
+				</div>
+				<div id="c3" class="photocolumn">
+					<!-- <img class="pic" src="images/p9.jpg">
+					<img class="pic" src="images/p16.jpg">
+					<img class="pic" src="images/p6.jpg">
+					<img class="pic" src="images/p12.jpg"> -->
+				</div>
+				<div id="c4" class="photocolumn">	
+					<!-- <img class="pic" src="images/p13.jpg">
+					<img class="pic" src="images/p8.jpg">
+					<img class="pic" src="images/p15.jpg">
+					<img class="pic" src="images/p2.jpg"> -->
+				</div>
 			</div>
 		</div>
 	</div>
+
+<script src="js/new.js"></script>
 </body>
