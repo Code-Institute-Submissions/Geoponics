@@ -2,7 +2,9 @@ angular.module('RouteControllers', [])
 
     .controller('GalleryController', function($scope) {
 
-
+		function createImageAppendfunc(index, columnSelector) {
+		    return function() { $(columnSelector).append(`<img src="images/p${index}.jpg" class="pic">`); };
+		}
 
 		// var IMAGES = ['images/p1.jpg','images/p2.jpg'];
 		// console.log(IMAGES);
@@ -14,22 +16,47 @@ angular.module('RouteControllers', [])
 		// ^^ this places all the photos from images inside one container, 17 is the number of images in the folder ^^
 		// +1 so this needs to be updated if more pictures are added. Need something else to read folder contents.
 
+		// var index1 = 1;
+		// var index2 = 2;
+		// var index3 = 3;
+		// var index4 = 4;
+
 		for (var i = 1; i < 17; i = i + 4) {
-			console.log(i);	
-			$('#c1').append(`<img src="images/p${i}.jpg" class="pic">`);
+			setTimeout(createImageAppendfunc(i, "#c1"),	i*200);
+			setTimeout(createImageAppendfunc(i+1, "#c2"),	i*200);	
+			setTimeout(createImageAppendfunc(i+2, "#c3"),	i*200);	
+			setTimeout(createImageAppendfunc(i+3, "#c4"),	i*200);			
 		}
-		for (var i = 2; i < 17; i = i + 4) {
-			console.log(i);	
-			$('#c2').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-		}
-		for (var i = 3; i < 17; i = i + 4) {
-			console.log(i);	
-			$('#c3').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-		}
-		for (var i = 4; i < 17; i = i + 4) {
-			console.log(i);	
-			$('#c4').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-		}
+
+		$(window).scroll(function() {
+
+			var column1height = Array.from(document.getElementById("c1").children).reduce((s, x)=>s+x.height, 0);
+			var column2height = Array.from(document.getElementById("c2").children).reduce((s, x)=>s+x.height, 0);
+			var column3height = Array.from(document.getElementById("c3").children).reduce((s, x)=>s+x.height, 0);
+			var column4height = Array.from(document.getElementById("c4").children).reduce((s, x)=>s+x.height, 0);
+
+		   if($(window).scrollTop() + $(window).height() > column1height) {
+				for (var i = 1; i < 17; i = i + 4) {
+					setTimeout(createImageAppendfunc(i, "#c1"),	i*10);	
+				}
+			}		   		
+		   if($(window).scrollTop() + $(window).height() > column2height) {	
+				for (var i = 2; i < 17; i = i + 4) {
+					setTimeout(createImageAppendfunc(i, "#c2"),	i*10);
+				}
+			}
+		   if($(window).scrollTop() + $(window).height() > column3height) {
+				for (var i = 3; i < 17; i = i + 4) {
+					setTimeout(createImageAppendfunc(i, "#c3"),	i*10);
+				}
+			}
+		   if($(window).scrollTop() + $(window).height() > column4height) {
+				for (var i = 4; i < 17; i = i + 4) {
+					setTimeout(createImageAppendfunc(i, "#c4"),	i*10);
+				}
+		   }
+		});
+
 		//^^ this places the <img> tags in each column (#c1/2/3/4) and divides them equally. it assigns photos ^^ 
 		// a numberical value which corresponds with a number i gave each .jpg in the file directory. Hopefully
 		// this would lessen the coding necessary considerably if adding hundereds of photos.
@@ -53,38 +80,38 @@ angular.module('RouteControllers', [])
   //   		return isVisible;
 		// }
         
-		$(window).scroll(function() {
+		// $(window).scroll(function() {
 
-			var column1height = Array.from(document.getElementById("c1").children).reduce((s, x)=>s+x.height, 0);
-			var column2height = Array.from(document.getElementById("c2").children).reduce((s, x)=>s+x.height, 0);
-			var column3height = Array.from(document.getElementById("c3").children).reduce((s, x)=>s+x.height, 0);
-			var column4height = Array.from(document.getElementById("c4").children).reduce((s, x)=>s+x.height, 0);
+		// 	var column1height = Array.from(document.getElementById("c1").children).reduce((s, x)=>s+x.height, 0);
+		// 	var column2height = Array.from(document.getElementById("c2").children).reduce((s, x)=>s+x.height, 0);
+		// 	var column3height = Array.from(document.getElementById("c3").children).reduce((s, x)=>s+x.height, 0);
+		// 	var column4height = Array.from(document.getElementById("c4").children).reduce((s, x)=>s+x.height, 0);
 
-		   if($(window).scrollTop() + $(window).height() > column1height) {
-				for (var i = 1; i < 17; i = i + 4) {
-					console.log(i);	
-					$('#c1').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-				}
-			}		   		
-		   if($(window).scrollTop() + $(window).height() > column2height) {	
-				for (var i = 2; i < 17; i = i + 4) {
-					console.log(i);	
-					$('#c2').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-				}
-			}
-		   if($(window).scrollTop() + $(window).height() > column3height) {
-				for (var i = 3; i < 17; i = i + 4) {
-					console.log(i);	
-					$('#c3').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-				}
-			}
-		   if($(window).scrollTop() + $(window).height() > column4height) {
-				for (var i = 4; i < 17; i = i + 4) {
-					console.log(i);	
-					$('#c4').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
-				}
-		   }
-		});
+		//    if($(window).scrollTop() + $(window).height() > column1height) {
+		// 		for (var i = 1; i < 17; i = i + 4) {
+		// 			console.log(i);	
+		// 			$('#c1').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
+		// 		}
+		// 	}		   		
+		//    if($(window).scrollTop() + $(window).height() > column2height) {	
+		// 		for (var i = 2; i < 17; i = i + 4) {
+		// 			console.log(i);	
+		// 			$('#c2').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
+		// 		}
+		// 	}
+		//    if($(window).scrollTop() + $(window).height() > column3height) {
+		// 		for (var i = 3; i < 17; i = i + 4) {
+		// 			console.log(i);	
+		// 			$('#c3').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
+		// 		}
+		// 	}
+		//    if($(window).scrollTop() + $(window).height() > column4height) {
+		// 		for (var i = 4; i < 17; i = i + 4) {
+		// 			console.log(i);	
+		// 			$('#c4').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
+		// 		}
+		//    }
+		// });
 
 		// ^^ detects wether the use has scrolled to the bottom of the page by finding the windows height adding the scroll height
 		// and checking wether it is equal to the size of the document.
