@@ -320,7 +320,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	width: 100%;
 	padding:2px 2px 2px 2px;
 	animation-name: photoload;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
