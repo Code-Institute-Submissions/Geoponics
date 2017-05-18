@@ -55,19 +55,30 @@ angular.module('RouteControllers', [])
         
 		$(window).scroll(function() {
 
-		   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+			var column1height = Array.from(document.getElementById("c1").children).reduce((s, x)=>s+x.height, 0);
+			var column2height = Array.from(document.getElementById("c2").children).reduce((s, x)=>s+x.height, 0);
+			var column3height = Array.from(document.getElementById("c3").children).reduce((s, x)=>s+x.height, 0);
+			var column4height = Array.from(document.getElementById("c4").children).reduce((s, x)=>s+x.height, 0);
+
+		   if($(window).scrollTop() + $(window).height() > column1height) {
 				for (var i = 1; i < 17; i = i + 4) {
 					console.log(i);	
 					$('#c1').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
 				}
+			}		   		
+		   if($(window).scrollTop() + $(window).height() > column2height) {	
 				for (var i = 2; i < 17; i = i + 4) {
 					console.log(i);	
 					$('#c2').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
 				}
+			}
+		   if($(window).scrollTop() + $(window).height() > column3height) {
 				for (var i = 3; i < 17; i = i + 4) {
 					console.log(i);	
 					$('#c3').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
 				}
+			}
+		   if($(window).scrollTop() + $(window).height() > column4height) {
 				for (var i = 4; i < 17; i = i + 4) {
 					console.log(i);	
 					$('#c4').append('<img src="'+"images/p"+i+".jpg"+'" class="pic">');
