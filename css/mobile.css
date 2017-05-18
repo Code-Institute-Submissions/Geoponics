@@ -231,7 +231,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 70%;
+	width: 90%;
 }
 
 .abscontainercolumn { /*absolutely positioned box for content that sits above fixed size images*/
@@ -241,7 +241,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	position: absolute;
 	background-color: rgba(236,236,236,0);
 	border-radius: 10px;
-	width: 70%; 
+	width: 90%; 
 	z-index: 1;
 }
 
@@ -249,15 +249,17 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 
 	background-color: rgba(236,236,236,1);
 	border-radius: 10px;
-	margin:5px;
-	padding:8px;
-	font-size: 1.9rem;
+	margin:2px;
+	padding:4px;
+	font-size: 1.8rem;
 	text-align: center;
 
 }
 
 .textsmall { /*make text smaller add class before textbox*/
 	font-size: 1.3rem;
+	margin: 4px;
+	padding: 5px 10px 5px 10px;
 }
 
 .divider { /*my white circle page divider*/
@@ -296,20 +298,27 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 }*/
 #c1{} #c2{} #c3{display:none;} #c4{display:none;}
 
+.anewbox {
+	width: 100%;
+	column-count: 2;
+	column-fill: auto;
+	column-gap: 0;
+}
+
 #photocontainer {
 	display: flex;
 	width: 100%;
 	flex-direction: row;
+
 }
 
 .pic {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+	display: block;
 	width: 100%;
 	padding:2px 2px 2px 2px;
-	display: flex;
-
 	animation-name: photoload;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
@@ -323,13 +332,12 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 } /*makes photos fade in on creation*/
 
 .photocolumn {
-/*	flex:1;*/
-	/*flex-grow: 1;*/
 	transition: width 1s;
 	width: 50%;
 	display: flex;
 	flex-direction: column;
 }
+
 
 
 

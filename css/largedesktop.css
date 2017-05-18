@@ -1,21 +1,39 @@
 @media only screen and (min-width: 1440px) {
 
+	.textbox {
+		font-size: 3rem;
+		padding: 30px;
+		margin: 10px;
+	}
+
+	.textsmall {
+		font-size: 2.3rem;
+	}
+
 	.phototext {
 		font-size: 2.3rem;
 	}
 
-/*	#c1 {
-		transition: flex 2s;
-		flex: 2;
-	}*/
+	#c1 {
+		transition: width 1s;
+		width: 40%;
+	}
 
-	#c1{} #c2{} #c3{display:flex;} #c4{display:flex;}
+	#c2{} #c3{display:flex;} #c4{display:flex;}
 
 	.photocolumn {
-	display: flex;
-	flex-direction: column;
-	transition: width 1s;
-	width: 25%;
-}
+		display: flex;
+		flex-direction: column;
+		transition: width 1s;
+		width: 20%;
+	}
+
+	.anewbox {
+		width: 100%;
+		column-count: 4;
+		column-fill: auto;
+		transition: column-width 2s;
+		column-width: 25%;
+	}
 
 }
