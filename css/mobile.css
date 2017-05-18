@@ -298,10 +298,10 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 }*/
 #c1{} #c2{} #c3{display:none;} #c4{display:none;}
 
-.anewbox {
+#anewbox {
 	width: 100%;
 	column-count: 2;
-	column-fill: auto;
+	column-fill: balance;
 	column-gap: 0;
 }
 

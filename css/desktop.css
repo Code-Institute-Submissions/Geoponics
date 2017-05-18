@@ -143,10 +143,9 @@
 	width: 33%;
 }
 
-.anewbox {
+#anewbox {
 	width: 100%;
 	column-count: 3;
-	column-fill: auto;
 }
 
 }
