@@ -1,0 +1,42 @@
+<div class="pagecontainer"> 
+	<div class="contentcontainer">
+<!-- 		<div class="rowcolcontainer">
+			<div ng-repeat="workshop in workshopdata">
+				<h1> {{workshop.name}} </h1>
+				<h2>Max Group size is {{workshop.maxgroupsize}} </h2>
+				<h3>This course is best suited to the months {{workshop.months}} </h3>
+				<p>About this course {{workshop.description}} </p>
+			</div>
+		</div> -->
+		<div>
+			<li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item">
+			  <a href ng-click="select($event)" class="nav-link" uib-tab-heading-transclude>{{heading}}</a>
+			</li>
+
+			<div>
+			  <ul class="nav nav-{{tabset.type || 'tabs'}}" ng-class="{'nav-justified': justified}" ng-transclude></ul>
+			  <div class="tab-content">
+			    <div class="tab-pane"
+			         ng-repeat="tab in tabset.tabs"
+			         ng-class="{active: tabset.active === tab.index}"
+			         uib-tab-content-transclude="tab">
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+		<uib-tabset active="activeJustified" justified="true">
+		    <uib-tab index="0" heading="Justified">Justified content</uib-tab>
+		    <uib-tab index="1" heading="SJ">Short Labeled Justified content</uib-tab>
+		    <uib-tab index="2" heading="Long Justified">Long Labeled Justified content</uib-tab>
+		</uib-tabset>
+
+
+
+	</div>
+</div>
+
+
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+     <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>

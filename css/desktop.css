@@ -149,4 +149,21 @@
 	column-fill: auto;
 }
 
+/*---------------------------------PROJECTS PAGE------------------------------*/
+
+.workshopbox {
+
+}
+
+.workshoppic {
+
+}
+
+.workshopgrid {
+	display:grid;
+	width: 100%;
+	grid-template-columns: repeat(2 ,1fr);
+	grid-template-rows:auto;
+}
+
 }

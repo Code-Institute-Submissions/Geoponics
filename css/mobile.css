@@ -3,9 +3,8 @@
 html {font-family: "Source Sans Pro", Sans-Serif; font-size: 12px; font-weight: 200;}
 body {font-family: "Source Sans Pro", Sans-Serif; font-size: 12px; font-weight: 200; min-width:300px;/*background-color: rgb(176,255,133);*/}
 
-h1 {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0;}
-h2 {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0;}
-p {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0;}
+h1, h2, h3 {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0px; padding: 10px;}
+p {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0; font-size: 1rem; padding: 10px;}
 
 a {text-decoration: none;}
 a:hover {text-decoration: none;}
@@ -14,21 +13,21 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 
 /*--------------------------------ELEMENTS ----------------------------------*/
 
-.pagecontainer {
+.pagecontainer { /*this my container for every page it is full width and makes sure to center everything inside*/
 	background-color: rgba(236,236,236,1);
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
 }
 
-@keyframes pageload {
+@keyframes pageload { /*this fades in everything contained in the pagecontainer for when links are pressed*/
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-.contentcontainer {
+.contentcontainer { /*holds all page content and is used to change the scale of all content with different screen sizes*/
 	width: 95%;	
 	animation-name: pageload;
     animation-duration: 0.5s;
@@ -36,7 +35,9 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
     animation-fill-mode: forwards;
 	}
 
-.unhighlight {
+.unhighlight { 
+	/*this is used to unhighlight objects the user has clicked on, I use this method instead of just having
+	  a highlight because i dont want all content to have this transition occur on pageload*/
 	transition: opacity 0.6s;
 	opacity: 0;
 	-webkit-transition: opacity 0.6s;
@@ -45,7 +46,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 
 }
 
-.highlight {
+.highlight { /*used to highlight content*/
 	transition: opacity 0.6s;
 	opacity: 1;
 	-webkit-transition: opacity 0.6s;
@@ -68,7 +69,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	align-items: center;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
 	margin-top: 10px;
 	margin-bottom: 10px;
 
@@ -78,8 +79,8 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	width: 60%;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 }
 
 #title {
@@ -125,6 +126,11 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	position: absolute;
 	z-index: -10;
 }
+
+
+
+
+
 /*-----------------------------------------------------*/
 
 #headline {
@@ -144,7 +150,8 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	display: block;
   	visibility: visible;
 	position: absolute;
-	left: 5%;
+	/*left: 5%;*/
+	right: 5%;
 }
 
 #navbutton::-moz-focus-inner{
@@ -158,13 +165,13 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	position: relative;
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 }
 
 .linksholder {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 	position: absolute;
 	z-index: 10;
 	text-align: center;
@@ -179,6 +186,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 }
 
 .navelement {
+	border-radius: 5px;
 	font-size: 2.3rem;
 	padding: 1%;
 	flex:1;
@@ -202,15 +210,15 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 }
 
 
-/*----------------------------------HOMEPAGE---------------------------------------*/
+/*----------------------------------GENERIC CONTAINERS---------------------------------------*/
 
 .centercontainer { /*container that centers content on both x+y axis*/
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	align-items: center;
-	justify-content: center;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 	background-color: rgba(236,236,236,0);
 	transition: opacity 1s;
 	opacity: 1;
@@ -219,8 +227,8 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 .rowcolcontainer { /*container that arranges content in rows for desktop and columns for mobile*/
 	display: flex;
 	width: 100%;
-	align-items: center;
-	justify-content: space-around;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	justify-content: space-around; -webkit-justify-content: space-around; -moz-justify-content: space-around;
 	flex-direction: column;
 	font-size: 0;
 }
@@ -228,16 +236,16 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 .centerbox { /*boxes for holding content contained in center containers*/
 	margin-top: 45px;
 	margin-bottom: 45px;
-	align-items: center;
-	justify-content: center;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 	flex-direction: column;
 	width: 90%;
 }
 
 .abscontainercolumn { /*absolutely positioned box for content that sits above fixed size images*/
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: column; -webkit-flex-direction: column; -moz-flex-direction: column;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
 	position: absolute;
 	background-color: rgba(236,236,236,0);
 	border-radius: 10px;
@@ -290,12 +298,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 
 /*---------------------------------GALLERY PAGE------------------------------*/
 
-/*.photocontainer {
-	display:grid;
-	width: 100%;
-	grid-template-columns: repeat(2 ,1fr);
-	grid-template-rows:auto;
-}*/
+
 #c1{} #c2{} #c3{display:none;} #c4{display:none;}
 
 .anewbox {
@@ -308,8 +311,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 #photocontainer {
 	display: flex;
 	width: 100%;
-	flex-direction: row;
-
+	flex-direction: row; -webkit-flex-direction: row; -moz-flex-direction;
 }
 
 .pic {
@@ -338,9 +340,90 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	flex-direction: column;
 }
 
+#totop {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+}
 
+/*---------------------------------PROJECTS PAGE------------------------------*/
+.wrap { /*add row wrap to specific flexboxes*/
+	flex-wrap: wrap;
+}
 
+.workshopgrid {
+	display:grid;
+	width: 100%;
+	grid-template-columns: repeat(1 ,1fr);
+	grid-template-rows:auto;
+}
 
+.workshopbox {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-size: 12px;
+	padding: 10px 10px 10px 10px;
+	width: 99%;
+	margin-bottom: 10px;
+	border: solid 5px;
+	border-color: white;
+	border-radius: 10px;
+}
 
+.workshoppic {
+	width: 100%;
+	overflow: hidden;
+	height: 300px;
+	margin:2px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.colorgrey { /*adds generic site styling for specific elements*/
+	background-color: rgba(236,236,236,1);
+	border-radius: 5px;
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.colorwhite { /*adds generic site styling for specific elements*/
+	background-color: white;
+	border-radius: 5px;
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.workshoptitle {
+	width: 100%;
+	background-color: white;
+}
+
+.workshopfooter {
+
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+    color: white;
+    background-color: rgb(60,60,60);
+} /*this changes a pill when clicked*/
+
+.nav-pills > li > a:hover {
+    background-color: rgb(156,156,156);
+    color:white;
+} /*this affects the pills that are not currently active*/
+
+.nav-pills > li.active > a:hover {
+    background-color: rgb(60,60,60);
+    color:white;
+} /*this affects currently active pill*/
 
 

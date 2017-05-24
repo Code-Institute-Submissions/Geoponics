@@ -36,4 +36,22 @@
 		column-width: 25%;
 	}
 
+
+/*---------------------------------PROJECTS PAGE------------------------------*/
+
+.workshopbox {
+	font-size: 12px;
+}
+
+.workshoppic {
+		height: 400px;
+}
+
+.workshopgrid {
+	display:grid;
+	width: 100%;
+	grid-template-columns: repeat(3 ,1fr);
+	grid-template-rows:auto;
+}
+
 }
