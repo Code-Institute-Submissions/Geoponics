@@ -2,33 +2,24 @@
 
 /*-----------------------Navigation--------------------------------------*/
 
-	.contentcontainer {
+	#mobilejsquery {display: none;} #tabletjsquery{display: block;} #desktopjsquery {display: none;}
+
+/*	.contentcontainer {
 		width: 85%;
-	}
+	}*/
 
 	#title {
 		flex: 1;
 	}
 
 	#titleanim {
-		/*visibility: hidden;*/
-		margin-left: 31.25%;
 	}
 	#titleanim2 {
-		/*visibility: hidden;*/
-		margin-left: 31.25%;
-	}
-
-	@keyframes titleanimationtwo {
-	    from {width: 0%;}
-	    to {width: 98%;}
 	}
 
 	#navcontain {
 		flex-direction: row;
 		justify-content: space-around;
-		margin-top: 25px;
-		margin-bottom: 25px;
 	}
 
 	#navbutton {
@@ -75,7 +66,11 @@
 
 /*-----------------------homepage-------------------------------------*/	
 
-#backgroundimg {
+.backgroundimg {
+	object-fit: cover;
+	height: 700px;
+	display: flex;
+	width: 100%;
 }
 
 /*.centercontainer {
@@ -84,6 +79,10 @@
 
 .rowcolcontainer {
 	flex-direction: row;
+}
+
+#homecontainer {
+	height: 700px;
 }
 
 .centerbox {
@@ -97,11 +96,11 @@
 }
 
 .abscontainercolumn {
-	width: 80%;
+	width: 50%;
 }
 
 .textbox {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	padding: 15px;
 	margin: 8px;
 }
@@ -118,6 +117,22 @@
 
 .margin {
 	margin: 4px;
+}
+
+#t1 {
+	font-size: 8rem;
+	letter-spacing: 20px;
+	margin-left: 20px;
+}
+
+#t2 {
+	font-size: 8rem;
+	letter-spacing: 20px;
+	margin-left: 20px
+}
+
+.linkimg {
+	height: 300px;
 }
 
 /*---------------------------------GALLERY PAGE------------------------------*/
@@ -160,10 +175,15 @@
 }
 
 .workshopgrid {
-	display:grid;
-	width: 100%;
 	grid-template-columns: repeat(2 ,1fr);
-	grid-template-rows:auto;
+}
+
+.workshoptab {
+	font-size: 1.55rem;
+}
+
+.workshoptext {
+	font-size: 1.6rem;
 }
 
 }

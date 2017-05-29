@@ -6,10 +6,17 @@ body {font-family: "Source Sans Pro", Sans-Serif; font-size: 12px; font-weight: 
 h1, h2, h3 {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0px; padding: 10px;}
 p {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200; margin:0; font-size: 1rem; padding: 10px;}
 
-a {text-decoration: none;}
-a:hover {text-decoration: none;}
+a {text-decoration: none; color: black;}
+a:hover {text-decoration: none; color: black;}
 
 div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
+
+/*--------------------------------JS MEDIA QUERY ----------------------------*/
+
+#mobilejsquery {display: block;} #tabletjsquery{display: none;} #desktopjsquery {display: none;}
+
+/*This allows me to trigger js functions on screen width change by checking that a css object is visible on the 
+page, rather than checking js (window).screenwidth which isnt based on the same scale as css px screen sizes.*/
 
 /*--------------------------------ELEMENTS ----------------------------------*/
 
@@ -33,6 +40,8 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+    justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
 	}
 
 .unhighlight { 
@@ -76,24 +85,35 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 }
 
 #titleholder {
-	width: 60%;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center; -webkit-align-items: center; -moz-align-items: center;
 	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 }
 
+#titleholder2 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
+}
+
 #title {
-	padding: 2%;
-	margin-top: 2%;
-	margin-bottom: 2%; 
+	margin-left: 20px;
 	max-width: 90%;
+}
+
+#animholder {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*----------------BelongTogether-----------------------*/
 /* ANIMATION */
 @keyframes titleanimation {
-    from {width: 0%;}
+    from {width: 1%;}
     to {width: 100%;}
 }
 
@@ -106,25 +126,27 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	background-color: rgba(236,236,236,1);
 	position: absolute;
 	z-index: -10;
+	margin-left: 0;
 }
 /*-----------------------------------------------------*/
 
 /*----------------BelongTogether-----------------------*/
 /* ANIMATION */
 @keyframes titleanimationtwo {
-    from {width: 0%;}
-    to {width: 95%;}
+    from {width: 1%;}
+    to {width: 100%;}
 }
 
 #titleanim2 {
 	animation-name: titleanimationtwo;
-    animation-duration: 1.9s;
+    animation-duration: 2.3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 	height: 100%;
 	background-color: white;
 	position: absolute;
 	z-index: -10;
+	margin-left: 0;	
 }
 
 
@@ -149,9 +171,8 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	/*my button styling*/
 	display: block;
   	visibility: visible;
-	position: absolute;
 	/*left: 5%;*/
-	right: 5%;
+	margin-right: 8%;
 }
 
 #navbutton::-moz-focus-inner{
@@ -176,9 +197,6 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	z-index: 10;
 	text-align: center;
 	width: 100%;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	border-bottom: solid white 3px;
 }
 
 .linkBckgrnd {
@@ -233,6 +251,81 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	font-size: 0;
 }
 
+.rowcontainer {
+	display: flex;
+	width: 100%;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	justify-content: space-around; -webkit-justify-content: space-around; -moz-justify-content: space-around;
+	flex-direction: row;
+	font-size: 0;
+}
+
+#homecontainer {
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+
+#homeheader {
+	bottom: 30%;
+	position: absolute;
+	z-index: 20;
+	display: flex;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+}
+
+#t1 {
+	font-weight: 400;
+	font-size: 3rem;
+	color: white;
+	letter-spacing: 10px;
+	opacity: 1;
+	transition: opacity 1.5s;
+	margin-left: 10px;
+	filter: blur(0px);
+	transition: filter 1.5s;
+}
+
+#t2 {
+	font-weight: 400;
+	font-size: 3rem;
+	color: white;
+	letter-spacing: 10px;
+	opacity: 0;
+	transition: opacity 1.5s;
+	margin-left: 10px;
+	filter: blur(50px);
+	transition: filter 1.5s;
+}
+
+#i1 {
+	position: absolute;
+	opacity: 1;
+	transition: opacity 1.5s;
+}
+
+#i2 {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+#homeheader:hover > #t1 {
+	opacity: 0;
+	filter: blur(50px);
+}
+#homeheader:hover > #t2 {
+	opacity: 1;
+	filter: blur(0px);
+}
+#homecontainer:hover #i1 {
+	opacity: 0;
+}
+#homecontainer:hover #i2 {
+	opacity: 1;
+}
+
 .centerbox { /*boxes for holding content contained in center containers*/
 	margin-top: 45px;
 	margin-bottom: 45px;
@@ -243,26 +336,65 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 }
 
 .abscontainercolumn { /*absolutely positioned box for content that sits above fixed size images*/
+	justify-content: center;
 	display: flex;
-	flex-direction: column; -webkit-flex-direction: column; -moz-flex-direction: column;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
 	position: absolute;
 	background-color: rgba(236,236,236,0);
 	border-radius: 10px;
-	width: 90%; 
+	width: 80%; 
 	z-index: 1;
 }
 
-.textbox { /*class for adding large information text*/
+.absbox {
+	display: flex;
+	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+	position: absolute;
+}
 
+.textbox { /*class for adding large information text*/
+	margin:2px;
+	padding:4px;
+	font-size: 1.6rem;
+	text-align: center;
+	font-weight: 200;
+	color: black;
+	text-align: justify;
+}
+
+.linkimg {
+	object-fit: cover;
+	flex:1;
+	width: 100%;
+	height: 200px;
+}
+
+.imagetextbox { /*class for adding large information text*/
+	margin:2px;
+	padding:4px;
+	font-size: 3rem;
+	text-align: center;
+	font-weight: 400;
+	color: white;
+
+}
+
+.textlink { /*class for adding text links*/
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: rgba(236,236,236,1);
-	border-radius: 10px;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
 	margin:2px;
 	padding:4px;
 	font-size: 1.8rem;
 	text-align: center;
 
 }
+s
 
 .textsmall { /*make text smaller add class before textbox*/
 	font-size: 1.3rem;
@@ -279,13 +411,19 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	z-index: 10;
 }
 
-#backgroundimg {
+.backgroundimg {
+	object-fit: cover;
+	height: 300px;
 	display: flex;
 	width: 100%;
 }
 
 .box1 { /*div to go inside flex containers that will always try take up 100%, but multiples will share the space, good for some applications*/
-	width: 100%;
+	flex: 1;
+}
+
+.box2 { /*div to go inside flex containers that will always try take up 100%, but multiples will share the space, good for some applications*/
+	width:100%;
 }
 
 .pic { /*so all img's fill containers and their height is maintained*/
@@ -295,6 +433,7 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 .margin { /*add a margin to an object*/
 	margin: 1px;
 }
+
 
 /*---------------------------------GALLERY PAGE------------------------------*/
 
@@ -372,9 +511,14 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	padding: 10px 10px 10px 10px;
 	width: 99%;
 	margin-bottom: 10px;
-	border: solid 5px;
-	border-color: white;
+/*	border: solid 5px;
+	border-color: white;*/
 	border-radius: 10px;
+}
+
+.workshoptab {
+	font-size: 2.5rem;
+	width: 100%;
 }
 
 .workshoppic {
@@ -384,6 +528,11 @@ div {font-family: "Source Sans Pro", Sans-Serif; font-weight: 200;}
 	margin:2px;
 	object-fit: cover;
 	border-radius: 10px;
+}
+
+.workshoptext {
+	font-size: 1.6rem;
+	padding: 5%;
 }
 
 .colorgrey { /*adds generic site styling for specific elements*/

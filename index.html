@@ -3,16 +3,21 @@
 <head>
     <base href="/"> <!-- needed for Angular HTML 5 mode -->
     <title>Geoponics</title>
+
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-
-
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
     <link rel="stylesheet" type="text/css" href="css/desktop.css">
     <link rel="stylesheet" type="text/css" href="css/largedesktop.css">
     <link rel="stylesheet" type="text/css" href="css/tiny.css">
-        
+
+    
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+
+     <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <!-- <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script> --><!--  must come after angular js -->
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400&amp;subset=latin-ext,vietnamese" rel="stylesheet"> <!-- Contains info on what weight fonts can have + languages -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,24 +29,23 @@
     <div class="pagecontainer">
 
         <nav id="navcontain">
-
-            <div id="titleholder">
-
-                <div id="titleanim"></div>
-                <div id="titleanim2"></div>
-
-                <button id="navbutton"><span class="glyphicon glyphicon-menu-hamburger"></span></button> 
+            <div id="titleholder"> 
                 
-                <div id="title"> <h1 id="headline">Geoponics</h1>  </div>
-            
-            </div>
+                <div id="titleholder2">
+                    <div id="title"> <h1 id="headline">Geoponics</h1> </div>
+                    <button id="navbutton"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+                </div>
 
+            </div>
+            <div id="titleanim"></div>
+            <div id="titleanim2"></div>
+            
             <div id="linkposition"> <!-- this div is necessary to position the absolutely positioned linksholder below the title -->
                 <div class="linksholder unhighlight">
                     <a href="/" class="navelement">Home</a>
                     <a href="/gallery" class="navelement">Gallery</a>
-                    <a href="/projects" class="navelement">Projects</a>
                     <a href="/workshops" class="navelement">Workshops</a>
+                    <a href="/booking" class="navelement">Booking</a>
                 </div>
             </div>
 
@@ -55,16 +59,13 @@
     </div>
 
 <script src="data/workshops.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="js/nav-jquery.js"></script>
 <script src="js/site.js"></script>
 <script src="js/controller.js"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
-    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
-     <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+   
 
 </body>
 </html>
