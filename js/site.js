@@ -14,5 +14,9 @@ angular.module('Geoponics').config(function($locationProvider, $routeProvider) {
     .when('/workshops', {
         templateUrl: 'templates/workshops.html', 
         controller: 'WorkshopController'
+    })
+     .when('/booking', {
+        templateUrl: 'templates/booking.html', 
+        controller: 'BookingController'
     });
 });

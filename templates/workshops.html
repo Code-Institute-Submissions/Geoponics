@@ -1,13 +1,32 @@
 <div class="pagecontainer"> 
 	<div class="contentcontainer">
+
+		<div class="centercontainer"> 
+			<div class="centercontainer imagelinkscontainer">
+				<img class="pageheaderimg" src="images/background13.jpg">
+				<p class="absbox whitetextlink">Workshops</p>
+			</div>
+		</div>
+
+		<div class="centercontainer">
+			<div class="divider"></div>
+		</div>
+
+		<div class="centercontainer">
+			<div class="centerbox">
+			<p class="textbox">Browse the workshops we have and feel free to search keywords especially the season to see if your chosen workshop is available at this time of year</p>
+			<input type="text" name="" class="workshopform" ng-model="search">
+			</div>	
+		</div>
+
 		<div class="workshopgrid">
-			<div ng-repeat="workshop in workshopdata">
+			<div ng-repeat="workshop in workshopdata | filter : search">
 				<div class="workshopbox">
-					<h1>{{workshop.name}}</h1>
+					<h1 class="workshoptitle">{{workshop.name}}</h1>
 					<img ng-src="{{workshop.workshopimg}}" class="workshoppic">
 					<uib-tabset active="activeJustified" justified="true" class="box2">
 						    <uib-tab index="0" heading="About" class="workshoptab">
-						    	<h3>{{workshop.blerb}}</h3>
+						    	<h3 class="workshoptexttitle">{{workshop.blerb}}</h3>
 						    	<div class="workshoptext">{{workshop.description}}</div>
 						    </uib-tab>
 						    <uib-tab index="1" heading="Season" class="workshoptab">
@@ -22,6 +41,7 @@
 					</uib-tabset>	
 				</div>
 			</div>
-		</div>		
+		</div>
+
 	</div>
 </div>

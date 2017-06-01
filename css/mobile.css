@@ -22,11 +22,25 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 
 .pagecontainer { /*this my container for every page it is full width and makes sure to center everything inside*/
 	background-color: rgba(236,236,236,1);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	width: 100%;
-	justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+}
+
+@-webkit-keyframes pageload { /*this fades in everything contained in the pagecontainer for when links are pressed*/
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 @keyframes pageload { /*this fades in everything contained in the pagecontainer for when links are pressed*/
@@ -36,12 +50,20 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 
 .contentcontainer { /*holds all page content and is used to change the scale of all content with different screen sizes*/
 	width: 95%;	
-	animation-name: pageload;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-animation-name: pageload;	
+	        animation-name: pageload;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
 	}
 
 .unhighlight { 
@@ -68,17 +90,25 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 
 #navcontain {
 	-webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
 	box-sizing:border-box;
 
 	width: 100%;
 	z-index: 10;
 	background-color: white;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	position: relative;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
 	margin-top: 10px;
 	margin-bottom: 10px;
 
@@ -86,18 +116,36 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 
 #titleholder {
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
-	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 }
 
 #titleholder2 {
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
-	justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between; -webkit-justify-content: space-between; -moz-justify-content: space-between;
 }
 
 #title {
@@ -112,16 +160,24 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 
 /*----------------BelongTogether-----------------------*/
 /* ANIMATION */
+@-webkit-keyframes titleanimation {
+    from {width: 1%;}
+    to {width: 100%;}
+}
 @keyframes titleanimation {
     from {width: 1%;}
     to {width: 100%;}
 }
 
 #titleanim {
-	animation-name: titleanimation;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+	-webkit-animation-name: titleanimation;
+	        animation-name: titleanimation;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 	height: 100%;
 	background-color: rgba(236,236,236,1);
 	position: absolute;
@@ -132,16 +188,24 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 
 /*----------------BelongTogether-----------------------*/
 /* ANIMATION */
+@-webkit-keyframes titleanimationtwo {
+    from {width: 1%;}
+    to {width: 100%;}
+}
 @keyframes titleanimationtwo {
     from {width: 1%;}
     to {width: 100%;}
 }
 
 #titleanim2 {
-	animation-name: titleanimationtwo;
-    animation-duration: 2.3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+	-webkit-animation-name: titleanimationtwo;
+	        animation-name: titleanimationtwo;
+    -webkit-animation-duration: 2.3s;
+            animation-duration: 2.3s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 	height: 100%;
 	background-color: white;
 	position: absolute;
@@ -185,14 +249,25 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 	/*contains the .linksholder and its position is relative to maintain .linksholder's pageflow within a flex container*/
 	position: relative;
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 }
 
 .linksholder {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 	position: absolute;
 	z-index: 10;
 	text-align: center;
@@ -207,17 +282,18 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 	border-radius: 5px;
 	font-size: 2.3rem;
 	padding: 1%;
-	flex:1;
-	color: black;
-	-webkit-transition: color 0.4s; /* Safari */
-    transition: color 0.4s;
-    -webkit-transition: background-color 0.4s; /* Safari */
-    transition: background-color 0.4s;
+	-webkit-box-flex:1;
+	    -ms-flex:1;
+	        flex:1;
+	color:black;
+    transition:color 0.4s, background-color 0.4s;
+    -webkit-transition:color 0.4s, background-color 0.4s; /* Safari */
+    -moz-transition:color 0.4s, background-color 0.4s; /* Safari */
 }
 
 .navelement:hover {
 	color: white;
-	background-color: black;
+	background-color: rgba(60,60,60,1);;
 }
 
 /*---------------------------------BOOTSTRAP CLASS/ID------------------------------*/
@@ -228,115 +304,174 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 }
 
 
-/*----------------------------------GENERIC CONTAINERS---------------------------------------*/
-
-.centercontainer { /*container that centers content on both x+y axis*/
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
-	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
-	background-color: rgba(236,236,236,0);
-	transition: opacity 1s;
-	opacity: 1;
-}
-
-.rowcolcontainer { /*container that arranges content in rows for desktop and columns for mobile*/
-	display: flex;
-	width: 100%;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
-	justify-content: space-around; -webkit-justify-content: space-around; -moz-justify-content: space-around;
-	flex-direction: column;
-	font-size: 0;
-}
-
-.rowcontainer {
-	display: flex;
-	width: 100%;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
-	justify-content: space-around; -webkit-justify-content: space-around; -moz-justify-content: space-around;
-	flex-direction: row;
-	font-size: 0;
-}
-
-#homecontainer {
+/*----------------------------------HOMEPAGE IMAGE+TITLE----------------------------*/
+.homecontainer { /*his holds my homepage title's and images*/
 	position: relative;
 	width: 100%;
 	height: 300px;
 }
 
-#homeheader {
+.homeheader { /*this holds my homepages titles (Geroponics/Earthworks)*/
 	bottom: 30%;
 	position: absolute;
 	z-index: 20;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
-	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+}
+.homeheader2 {
+	top: 30%;
 }
 
-#t1 {
+.t1 { /*t1 for title 1*/
 	font-weight: 400;
 	font-size: 3rem;
 	color: white;
 	letter-spacing: 10px;
 	opacity: 1;
-	transition: opacity 1.5s;
+	-webkit-transition: opacity 1.5s, -webkit-filter 1.5s;
+	transition: opacity 1.5s, -webkit-filter 1.5s;
+	transition: opacity 1.5s, filter 1.5s;
+	transition: opacity 1.5s, filter 1.5s, -webkit-filter 1.5s;
 	margin-left: 10px;
-	filter: blur(0px);
-	transition: filter 1.5s;
+	-webkit-filter: blur(0px);
+	        filter: blur(0px);
 }
 
-#t2 {
+.t2 { /*t2 for title 2*/
 	font-weight: 400;
 	font-size: 3rem;
 	color: white;
 	letter-spacing: 10px;
 	opacity: 0;
-	transition: opacity 1.5s;
+	-webkit-transition: opacity 1.5s, -webkit-filter 1.5s;
+	transition: opacity 1.5s, -webkit-filter 1.5s;
+	transition: opacity 1.5s, filter 1.5s;
+	transition: opacity 1.5s, filter 1.5s, -webkit-filter 1.5s;
 	margin-left: 10px;
-	filter: blur(50px);
-	transition: filter 1.5s;
+	-webkit-filter: blur(50px);
+	        filter: blur(50px);
 }
 
-#i1 {
+.i1 { /*i1 for title image 1*/
 	position: absolute;
 	opacity: 1;
+	-webkit-transition: opacity 1.5s;
 	transition: opacity 1.5s;
 }
 
-#i2 {
+.i2 { /*i1 for title image 2*/
 	position: absolute;
 	opacity: 0;
+	-webkit-transition: opacity 1.5s;
 	transition: opacity 1.5s;
 }
 
-#homeheader:hover > #t1 {
+.homeheader:hover > .t1 { /*these fade between my two homepage title's and images (Geoponics/Earthworks)*/
 	opacity: 0;
-	filter: blur(50px);
+	-webkit-filter: blur(50px);
+	        filter: blur(50px);
 }
-#homeheader:hover > #t2 {
+.homeheader:hover > .t2 {
 	opacity: 1;
-	filter: blur(0px);
+	-webkit-filter: blur(0px);
+	        filter: blur(0px);
 }
-#homecontainer:hover #i1 {
+.homecontainer:hover .i1 {
 	opacity: 0;
 }
-#homecontainer:hover #i2 {
+.homecontainer:hover .i2 {
 	opacity: 1;
+}
+
+/*----------------------------------GENERIC CONTAINERS---------------------------------------*/
+.centercontainer { /*container that centers content on both x+y axis*/
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	width: 100%;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+	background-color: rgba(236,236,236,0);
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s;
+	opacity: 1;
+}
+
+.rowcolcontainer { /*container that arranges content in rows for desktop and columns for mobile*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around; -webkit-justify-content: space-around; -moz-justify-content: space-around;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	font-size: 0;
+}
+
+.rowcontainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around; -webkit-justify-content: space-around; -moz-justify-content: space-around;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	font-size: 0;
 }
 
 .centerbox { /*boxes for holding content contained in center containers*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	margin-top: 45px;
 	margin-bottom: 45px;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
-	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
-	flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	width: 90%;
 }
 
 .abscontainercolumn { /*absolutely positioned box for content that sits above fixed size images*/
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	position: absolute;
 	background-color: rgba(236,236,236,0);
@@ -346,60 +481,62 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 }
 
 .absbox {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center; -webkit-align-items: center; -moz-align-items: center;
-	justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center; -webkit-justify-content: center; -moz-justify-content: center;
 	position: absolute;
 }
 
+.header {
+	font-size: 3.2rem;
+}
+
 .textbox { /*class for adding large information text*/
+	width: 95%;
 	margin:2px;
 	padding:4px;
 	font-size: 1.6rem;
-	text-align: center;
 	font-weight: 200;
 	color: black;
 	text-align: justify;
 }
 
-.linkimg {
-	object-fit: cover;
-	flex:1;
-	width: 100%;
-	height: 200px;
-}
-
-.imagetextbox { /*class for adding large information text*/
-	margin:2px;
-	padding:4px;
-	font-size: 3rem;
-	text-align: center;
-	font-weight: 400;
-	color: white;
-
-}
-
-.textlink { /*class for adding text links*/
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: rgba(236,236,236,1);
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-	margin:2px;
-	padding:4px;
-	font-size: 1.8rem;
-	text-align: center;
-
-}
-s
-
 .textsmall { /*make text smaller add class before textbox*/
 	font-size: 1.3rem;
 	margin: 4px;
 	padding: 5px 10px 5px 10px;
+}
+
+.linkimg {
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-webkit-box-flex:1;
+	    -ms-flex:1;
+	        flex:1;
+	width: 100%;
+	height: 200px;
+}
+
+.imagetextlink { /*class for adding large information text over images*/
+	width: 100%;
+	font-size: 3rem;
+	text-align: center;
+	font-weight: 200;
+	color: black;
+	background-color: rgba(236,236,236,0.8);
+	-webkit-transition: background-color 0.4s, color 0.4s;
+	transition: background-color 0.4s, color 0.4s;
+}
+.imagetextlink:hover {
+	background-color: rgba(60,60,60,0.8);
+	color: white;
 }
 
 .divider { /*my white circle page divider*/
@@ -412,14 +549,83 @@ s
 }
 
 .backgroundimg {
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-ms-object-fit: cover;
 	height: 300px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
 }
 
+.imagelinkscontainer:hover > .backgroundimglink {
+	-webkit-filter: brightness(50%);
+	        filter: brightness(50%);
+}
+
+.backgroundimglink {
+	-o-object-fit: cover;
+	   object-fit: cover;
+	height: 150px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-webkit-filter: brightness(80%);
+	        filter: brightness(80%);
+	-webkit-transition: -webkit-filter 1s;
+	transition: -webkit-filter 1s;
+	transition: filter 1s;
+	transition: filter 1s, -webkit-filter 1s;	
+}
+
+.whitetextlink {
+	font-weight: 400;
+	font-size: 3rem;
+	color: white;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+.whitetextlink:hover {
+
+}
+
+.pageheaderimg {
+	-o-object-fit: cover;
+	   object-fit: cover;
+	height: 150px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-webkit-filter: brightness(80%);
+	        filter: brightness(80%);
+}
+
+.myfooter {
+	background-color:  white;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
 .box1 { /*div to go inside flex containers that will always try take up 100%, but multiples will share the space, good for some applications*/
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 
 .box2 { /*div to go inside flex containers that will always try take up 100%, but multiples will share the space, good for some applications*/
@@ -434,6 +640,12 @@ s
 	margin: 1px;
 }
 
+/*.rotate {
+    -ms-transform: rotate(-90deg); 
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}*/
+
 
 /*---------------------------------GALLERY PAGE------------------------------*/
 
@@ -442,28 +654,45 @@ s
 
 .anewbox {
 	width: 100%;
-	column-count: 2;
-	column-fill: auto;
-	column-gap: 0;
+	-webkit-column-count: 2;
+	        column-count: 2;
+	-webkit-column-fill: auto;
+	        column-fill: auto;
+	-webkit-column-gap: 0;
+	        column-gap: 0;
 }
 
 #photocontainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	flex-direction: row; -webkit-flex-direction: row; -moz-flex-direction;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row; -moz-flex-direction: row;
 }
 
 .pic {
 	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	display: block;
 	width: 100%;
 	padding:2px 2px 2px 2px;
-	animation-name: photoload;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+	-webkit-animation-name: photoload;
+	        animation-name: photoload;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes photoload {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 
@@ -473,16 +702,28 @@ s
 } /*makes photos fade in on creation*/
 
 .photocolumn {
+	-webkit-transition: width 1s;
 	transition: width 1s;
 	width: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 #totop {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	position: fixed;
 	right: 5px;
 	bottom: 5px;
@@ -490,7 +731,8 @@ s
 
 /*---------------------------------PROJECTS PAGE------------------------------*/
 .wrap { /*add row wrap to specific flexboxes*/
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .workshopgrid {
@@ -502,11 +744,17 @@ s
 
 .workshopbox {
 	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	font-size: 12px;
 	padding: 10px 10px 10px 10px;
 	width: 99%;
@@ -521,18 +769,29 @@ s
 	width: 100%;
 }
 
+.workshoptitle {
+	font-size: 3rem;
+}
+
+.workshoptexttitle {
+	font-size: 2.5rem;
+	padding: 5%;
+}
+
+.workshoptext {
+	font-size: 2rem;
+	padding: 5%;
+	text-align: justify;
+}
+
 .workshoppic {
 	width: 100%;
 	overflow: hidden;
 	height: 300px;
 	margin:2px;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	border-radius: 10px;
-}
-
-.workshoptext {
-	font-size: 1.6rem;
-	padding: 5%;
 }
 
 .colorgrey { /*adds generic site styling for specific elements*/
@@ -551,28 +810,7 @@ s
 	margin-top: 5px;
 }
 
-.workshoptitle {
-	width: 100%;
-	background-color: white;
+.workshopform {
+	width: 60%;
+	font-size: 1.8rem;
 }
-
-.workshopfooter {
-
-}
-
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-    color: white;
-    background-color: rgb(60,60,60);
-} /*this changes a pill when clicked*/
-
-.nav-pills > li > a:hover {
-    background-color: rgb(156,156,156);
-    color:white;
-} /*this affects the pills that are not currently active*/
-
-.nav-pills > li.active > a:hover {
-    background-color: rgb(60,60,60);
-    color:white;
-} /*this affects currently active pill*/
-
-
