@@ -689,12 +689,10 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
             animation-fill-mode: forwards;
 }
 
-
 @-webkit-keyframes photoload {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
 
 @keyframes photoload {
     from {opacity: 0;}
