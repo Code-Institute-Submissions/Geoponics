@@ -1,7 +1,7 @@
 angular.module('RouteControllers', ['ui.bootstrap'])
 
 	.controller('HomeController', function($scope) {
-		$(window).off("scroll");
+
 	})
 
     .controller('GalleryController', function($scope) {
@@ -13,7 +13,7 @@ angular.module('RouteControllers', ['ui.bootstrap'])
 		function createImageAppendfunc(index, columnSelector) {
 		    return function() { $(columnSelector).append(`<img src="images/p${index}.jpg" class="pic">`); };
 		}
-	
+
 		function populateColumns(selectors) {
 			for (var i = 1; i < 17; i = i + 4) {
 		 		for (var i2 = 0; i2 < selectors.length; i2++) {
@@ -41,7 +41,6 @@ angular.module('RouteControllers', ['ui.bootstrap'])
 			} //this says if photocontainer is not present this code will not be active. This is because
 			 // $(window).on("scroll") is a global function so will remain active in other Angular Windows.
 			
-
 			$(window).on("scroll",function() {
 
 				var column1height = Array.from(document.getElementById("c1").children).reduce((s, x)=>s+x.height, 0);
@@ -49,21 +48,17 @@ angular.module('RouteControllers', ['ui.bootstrap'])
 				var column3height = Array.from(document.getElementById("c3").children).reduce((s, x)=>s+x.height, 0);
 				var column4height = Array.from(document.getElementById("c4").children).reduce((s, x)=>s+x.height, 0);
 
-
 				if ($('#mobilejsquery').is(':visible')) {
 					console.log("small");		
-					scrollPopulatecolumns(['#c1', '#c2', '#c1', '#c2',],[column1height, column2height, column1height, column2height],[1,2,3,4])
-				   
+					scrollPopulatecolumns(['#c1', '#c2', '#c1', '#c2',],[column1height, column2height, column1height, column2height],[1,2,3,4]);			   
 				}
-				if ($('#tabletjsquery').is(':visible')) {
+				else if ($('#tabletjsquery').is(':visible')) {
 					console.log("medium");		
-					scrollPopulatecolumns(['#c1', '#c2', '#c3', '#c2',],[column1height, column2height, column3height, column2height],[1,2,3,4])
-				   
+					scrollPopulatecolumns(['#c1', '#c2', '#c3', '#c2',],[column1height, column2height, column3height, column2height],[1,2,3,4]);				   
 				}
-				if ($('#desktopjsquery').is(':visible')) {
+				else if ($('#desktopjsquery').is(':visible')) {
 					console.log("large");		
-					scrollPopulatecolumns(['#c1', '#c2', '#c3', '#c4',],[column1height, column2height, column3height, column4height],[1,2,3,4])
-				   
+					scrollPopulatecolumns(['#c1', '#c2', '#c3', '#c4',],[column1height, column2height, column3height, column4height],[1,2,3,4]);			   
 				}								
 				// these for loops append new images as the user scrolls to the bottom of whichever
 				// column contains the least photos as they are different aspect ratios and create
@@ -131,7 +126,6 @@ angular.module('RouteControllers', ['ui.bootstrap'])
 				populateColumns(['#c1', '#c2', '#c3', '#c4']);
 				imgReloadNeededdesk = false;
 		} //desktop ^^
-
 		setTimeout(enableUserScroll , 30*50); 
 		setTimeout(enableUserResize, 30*50);
 		//this puts a hold on the user scrolling + resizing until the initial images have loaded/reloaded as it caused repeated images to be shown, this
@@ -142,21 +136,6 @@ angular.module('RouteControllers', ['ui.bootstrap'])
     .controller('WorkshopController', function($scope) {
 
 		$scope.workshopdata = WORKSHOPDATA;
-
-		$scope.tabs = [
-		{ title:'Dynamic Title 1', content:'Dynamic content 1' },
-		{ title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
-		];
-
-		$scope.alertMe = function() {
-		setTimeout(function() {
-		  $window.alert('You\'ve selected the alert tab!');
-		});
-		};
-
-		$scope.model = {
-		name: 'Tabs'
-		};
 
     });
 

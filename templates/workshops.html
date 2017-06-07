@@ -23,7 +23,7 @@
 			<div ng-repeat="workshop in workshopdata | filter : search">
 				<div class="workshopbox">
 					<h1 class="workshoptitle">{{workshop.name}}</h1>
-					<img ng-src="{{workshop.workshopimg}}" class="workshoppic">
+					<img ng-src="{{workshop.workshopimg}}" class="workshoppic">				
 					<uib-tabset active="activeJustified" justified="true" class="box2">
 						    <uib-tab index="0" heading="About" class="workshoptab">
 						    	<h3 class="workshoptexttitle">{{workshop.blerb}}</h3>
