@@ -23,10 +23,27 @@
 			</div>
 		</div>
 		<div class="centercontainer">
-			<form name="RequestInfo" novalidate>
-				<input type="text" name="firstname" ng-model="firstname" required>
-				<input type="text" name="lastname" ng-model="lastname" required>
-				<input type="email" name="email" ng-model="email" required>
+			<form novalidate name="RequestInfo" class="columncontainer" required>
+				<div class="rowcolcontainer">
+					<p class="formtext">Firstname:</p>
+					<input type="text" name="firstname" class="textbox" ng-model="firstname" required>
+				</div>
+				<div class="rowcolcontainer">
+					<p class="formtext">Surname:</p>
+					<input type="text" name="lastname" class="textbox" ng-model="lastname" required>
+				</div>
+				<div class="rowcolcontainer">
+					<p class="formtext">Email Address:</p>
+					<input type="email" name="email" class="textbox" ng-model="email" required>
+				</div>
+				<div class="columncontainer">
+					<div class="rowcolcontainer box1">
+						<p class="formtext">Workshop:</p>
+						<p class="formtextsmall formtext">What workshop are you interested in? do you have additional requirements you would like us to know before we contact you? Leave any details here</p>	
+					</div>	
+					<textarea name="details" cols="40" rows="5" class="formdetails" ng-model="details"></textarea>
+				</div>
+				<button class="navelement formbutton">Submit</button>
 			</form>
 		</div>
 	</div>

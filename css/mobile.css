@@ -223,7 +223,7 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 	font-size: 3rem;
 }
 
-#navbutton{
+.navbutton{
 	/*remove default button style*/
 	margin      : 0;
 	padding     : 0;
@@ -239,7 +239,7 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 	margin-right: 8%;
 }
 
-#navbutton::-moz-focus-inner{
+.navbutton::-moz-focus-inner{
 	/*remove mozilla default styling*/
 	padding : 0;
 	border  : 0;
@@ -447,6 +447,23 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 	font-size: 0;
 }
 
+.columncontainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; -webkit-align-items: center; -moz-align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around; -webkit-justify-content: space-around; -moz-justify-content: space-around;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	font-size: 0;
+}
+
 .centerbox { /*boxes for holding content contained in center containers*/
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -502,7 +519,7 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 	width: 95%;
 	margin:2px;
 	padding:4px;
-	font-size: 1.6rem;
+	font-size: 2rem;
 	font-weight: 200;
 	color: black;
 	text-align: justify;
@@ -811,4 +828,46 @@ page, rather than checking js (window).screenwidth which isnt based on the same 
 .workshopform {
 	width: 60%;
 	font-size: 1.8rem;
+}
+
+/*---------------------------------BOOKING PAGE------------------------------*/
+
+.formtext {
+	min-width: 20%;
+	margin:2px;
+	padding:4px;
+	font-size: 3rem;
+	font-weight: 200;
+	text-align: justify;
+}
+
+.formtextsmall { /*make text smaller add class before textbox*/
+	font-size: 2rem;
+	margin: 4px;
+	padding: 5px 10px 5px 10px;
+}
+
+.formbutton {
+		/*remove default button style*/
+	margin      : 0;
+	padding     : 0;
+	border      : 0;
+	background  : transparent;
+	font-family : inherit;
+	font-size   : 1em;
+
+	/*my button styling*/
+	display: block;
+	margin-right: 8%;
+	padding: 10px;
+	font-size: 2.3rem;
+}
+
+.formdetails {
+	width: 100%;
+	margin: 2px;
+	padding: 4px;
+	font-size: 2rem;
+	word-wrap: break-word;
+	min-height: 200px;
 }
