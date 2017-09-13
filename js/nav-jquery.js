@@ -1,4 +1,4 @@
-$("#navbutton").on("click", function(){
+$(".navbutton").on("click", function(){
 
 	if ( $(".linksholder").hasClass("highlight") ) {
 

@@ -1,0 +1,50 @@
+<div class="pagecontainer">
+	<div class="contentcontainer">
+
+		<div class="centercontainer"> 
+			<div class="centercontainer imagelinkscontainer">
+				<img class="pageheaderimg" src="images/background16.jpg">
+				<p class="absbox whitetextlink">Booking</p>
+			</div>
+		</div>
+
+		<div class="centercontainer">
+			<div class="divider"></div>
+		</div>
+
+		<div class="centercontainer">
+			<div class="centerbox">
+				<h1 class="header">Where to go now?</h1>
+				<div class="rowcolcontainer">
+					<div class="textbox">
+						Here you can find all our contact information to arrange booking a workshop and a list of our current open classes. If your interested in eco friendly landscaping services look for geoponics landscaping.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="centercontainer">
+			<form novalidate name="RequestInfo" class="columncontainer" required>
+				<div class="rowcolcontainer">
+					<p class="formtext">Firstname:</p>
+					<input type="text" name="firstname" class="textbox" ng-model="firstname" required>
+				</div>
+				<div class="rowcolcontainer">
+					<p class="formtext">Surname:</p>
+					<input type="text" name="lastname" class="textbox" ng-model="lastname" required>
+				</div>
+				<div class="rowcolcontainer">
+					<p class="formtext">Email Address:</p>
+					<input type="email" name="email" class="textbox" ng-model="email" required>
+				</div>
+				<div class="columncontainer">
+					<div class="rowcolcontainer box1">
+						<p class="formtext">Workshop:</p>
+						<p class="formtextsmall formtext">What workshop are you interested in? do you have additional requirements you would like us to know before we contact you? Leave any details here</p>	
+					</div>	
+					<textarea name="details" cols="40" rows="5" class="formdetails" ng-model="details"></textarea>
+				</div>
+				<button class="navelement formbutton">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>

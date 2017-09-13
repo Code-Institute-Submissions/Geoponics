@@ -2,36 +2,27 @@
 
 /*-----------------------Navigation--------------------------------------*/
 
-	.contentcontainer {
+	#mobilejsquery {display: none;} #tabletjsquery{display: block;} #desktopjsquery {display: none;}
+
+/*	.contentcontainer {
 		width: 85%;
-	}
+	}*/
 
 	#title {
 		flex: 1;
 	}
 
 	#titleanim {
-		/*visibility: hidden;*/
-		margin-left: 31.25%;
 	}
 	#titleanim2 {
-		/*visibility: hidden;*/
-		margin-left: 31.25%;
-	}
-
-	@keyframes titleanimationtwo {
-	    from {width: 0%;}
-	    to {width: 98%;}
 	}
 
 	#navcontain {
 		flex-direction: row;
 		justify-content: space-around;
-		margin-top: 25px;
-		margin-bottom: 25px;
 	}
 
-	#navbutton {
+	.navbutton {
 		visibility: hidden;
 	}
 
@@ -75,7 +66,11 @@
 
 /*-----------------------homepage-------------------------------------*/	
 
-#backgroundimg {
+.backgroundimg {
+	object-fit: cover;
+	height: 700px;
+	display: flex;
+	width: 100%;
 }
 
 /*.centercontainer {
@@ -84,6 +79,10 @@
 
 .rowcolcontainer {
 	flex-direction: row;
+}
+
+.homecontainer {
+	height: 700px;
 }
 
 .centerbox {
@@ -100,8 +99,13 @@
 	width: 80%;
 }
 
+.header {
+	font-size: 4rem;
+}
+
 .textbox {
-	font-size: 3rem;
+	width:80%;
+	font-size: 2.5rem;
 	padding: 15px;
 	margin: 8px;
 }
@@ -118,6 +122,39 @@
 
 .margin {
 	margin: 4px;
+}
+
+.t1 {
+	font-size: 8rem;
+	letter-spacing: 20px;
+	margin-left: 20px;
+}
+
+.t2 {
+	font-size: 8rem;
+	letter-spacing: 20px;
+	margin-left: 20px
+}
+
+.linkimg {
+	height: 300px;
+}
+
+.backgroundimglink {
+	height: 200px;
+	filter: brightness(100%);
+}
+
+.whitetextlink {
+	font-size: 8rem;
+	letter-spacing: 5px;
+}
+
+.pageheaderimg {
+	height: 200px;
+}
+
+.myfooter {
 }
 
 /*---------------------------------GALLERY PAGE------------------------------*/
@@ -146,6 +183,76 @@
 #anewbox {
 	width: 100%;
 	column-count: 3;
+}
+
+/*---------------------------------PROJECTS PAGE------------------------------*/
+
+.workshopbox {
+
+}
+
+.workshoppic {
+
+}
+
+.workshopgrid {
+	grid-template-columns: repeat(2 ,1fr);
+}
+
+.workshoptab {
+	font-size: 1.55rem;
+}
+
+.workshoptitle {
+	font-size: 2.5rem;
+}
+
+.workshoptexttitle {
+	font-size: 1.55rem;
+	padding: 5%;
+}
+
+.workshoptext {
+	font-size: 1.5rem;
+}
+
+.workshopform {
+	font-size: 2.2rem;
+}
+
+}
+
+@media only screen and (min-width: 900px) {
+
+/*These are needed because i couldnt find a better solution to resizing my angular.ui.bootstrap tabs than extra media queries for their font sizes*/
+
+.workshoptab {
+	font-size: 2rem;
+}
+
+.workshoptitle {
+	font-size: 2.5rem;
+}
+
+.workshoptexttitle {
+	font-size: 2rem;
+	padding: 5%;
+}
+
+.workshoptext {
+	font-size: 1.75rem;
+}
+
+/*---------------------------------BOOKINGS PAGE------------------------------*/
+
+.formtext {
+	font-size: 2.5rem;
+	padding: 15px;
+	margin: 8px;
+}
+
+.formtextsmall {
+	font-size: 1.8rem;
 }
 
 }

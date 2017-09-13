@@ -1,5 +1,11 @@
 @media only screen and (min-width: 1440px) {
 
+	#mobilejsquery {display: none;} #tabletjsquery{display: none;} #desktopjsquery {display: block;}
+
+	.header {
+		font-size: 5rem;
+	}
+
 	.textbox {
 		font-size: 3rem;
 		padding: 30px;
@@ -28,11 +34,82 @@
 		width: 20%;
 	}
 
-	/*--------column method ---------*/
-
-	#anewbox {
-		width: 100%;
-		column-count: 4;
+	.t1 {
+		font-size: 12rem;
+		letter-spacing: 50px;
+		margin-left: 50px;
 	}
+
+	.t2 {
+		font-size: 12rem;
+		letter-spacing: 50px;
+		margin-left: 50px;
+	}
+
+	.linkimg {
+		height: 400px;
+	}
+
+	.backgroundimglink {
+		height: 300px;
+	}
+
+	.whitetextlink {
+		font-size: 11rem;
+		letter-spacing: 5px;
+	}
+
+	.pageheaderimg {
+		height: 300px;
+	}
+
+
+/*---------------------------------PROJECTS PAGE------------------------------*/
+
+	.workshopbox {
+		font-size: 12px;
+	}
+
+	.workshoppic {
+			height: 400px;
+	}
+
+	.workshopgrid {
+		grid-template-columns: repeat(3 ,1fr);
+	}
+
+	.workshoptab {
+		font-size: 2.1rem;
+	}
+
+	.workshoptitle {
+		font-size: 3rem;
+	}
+
+	.workshoptexttitle {
+		font-size: 2.1rem;
+		padding: 5%;
+	}
+
+	.workshoptext {
+		font-size: 1.8rem;
+	}
+
+	.workshopform {
+		font-size: 3rem;
+	}
+
+
+/*---------------------------------BOOKINGS PAGE------------------------------*/
+
+.formtext {
+	font-size: 3rem;
+	padding: 15px;
+	margin: 8px;
+}
+
+.formtextsmall {
+	font-size: 2.3rem;
+}
 
 }
