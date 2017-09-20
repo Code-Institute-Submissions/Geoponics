@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='Geoponics'>
 <head>
-    <base href="/Geoponics/"> <!-- needed for Angular HTML 5 mode -->
+    <base href="Geoponics/"> <!-- needed for Angular HTML 5 mode -->
     <title>Geoponics</title>
 
     <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
@@ -42,10 +42,10 @@
             
             <div id="linkposition"> <!-- this div is necessary to position the absolutely positioned linksholder below the title -->
                 <div class="linksholder unhighlight">
-                    <a href="/" class="navelement">Home</a>
-                    <a href="/gallery" class="navelement">Gallery</a>
-                    <a href="/workshops" class="navelement">Workshops</a>
-                    <a href="/booking" class="navelement">Booking</a>
+                    <a href="." class="navelement">Home</a> <!-- use dot when / not allowed -->
+                    <a href="gallery" class="navelement">Gallery</a>
+                    <a href="workshops" class="navelement">Workshops</a>
+                    <a href="booking" class="navelement">Booking</a>
                 </div>
             </div>
 
