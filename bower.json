@@ -1,7 +1,7 @@
 {
   "name": "geoponics",
   "description": "Horitculture Site",
-  "main": "index.js",
+  "main": "node_modules/index.js",
   "authors": [
     "kaiforward <kaiforward123@gmail.com>"
   ],
