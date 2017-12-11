@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html ng-app='Geoponics'>
 <head>
-    <base href="/Geoponics/"> <!-- needed for Angular HTML 5 mode -->
+    <meta charset="utf-8">
+    <base href="/"> <!-- needed for Angular HTML 5 mode -->
     <title>Geoponics</title>
 
-    <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="css/desktop.css">
-    <link rel="stylesheet" type="text/css" href="css/largedesktop.css">
-    <link rel="stylesheet" type="text/css" href="css/tiny.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="/css/desktop.css">
+    <link rel="stylesheet" type="text/css" href="/css/largedesktop.css">
+    <link rel="stylesheet" type="text/css" href="/css/tiny.css">
 
     
 
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
 
-     <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+     <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
     <!-- <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script> --><!--  must come after angular js -->
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400&amp;subset=latin-ext,vietnamese" rel="stylesheet"> <!-- Contains info on what weight fonts can have + languages -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
 
 </head>
 <body>
-
     <div class="pagecontainer">
 
         <nav id="navcontain">
@@ -42,10 +41,10 @@
             
             <div id="linkposition"> <!-- this div is necessary to position the absolutely positioned linksholder below the title -->
                 <div class="linksholder unhighlight">
-                    <a href="." class="navelement">Home</a> <!-- use dot when / not allowed -->
-                    <a href="gallery" class="navelement">Gallery</a>
-                    <a href="workshops" class="navelement">Workshops</a>
-                    <a href="booking" class="navelement">Booking</a>
+                    <a href="/" class="navelement">Home</a> <!-- use dot when / using angular -->
+                    <a href="/gallery" class="navelement">Gallery</a>
+                    <a href="/workshops" class="navelement">Workshops</a>
+                    <a href="/booking" class="navelement">Booking</a>
                 </div>
             </div>
 
@@ -58,11 +57,11 @@
     <div ng-view>
     </div>
 
-<script src="data/workshops.js"></script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="js/nav-jquery.js"></script>
-<script src="js/site.js"></script>
-<script src="js/controller.js"></script>
+<script src="/data/workshops.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/js/nav-jquery.js"></script>
+<script src="/js/site.js"></script>
+<script src="/js/controller.js"></script>
 
 
    

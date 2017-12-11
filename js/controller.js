@@ -121,4 +121,3 @@ angular.module('RouteControllers', ['ui.bootstrap'])
 		$scope.workshopdata = WORKSHOPDATA;
 
     });
-
