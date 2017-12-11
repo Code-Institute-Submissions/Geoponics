@@ -2,7 +2,7 @@
   "name": "geoponics",
   "version": "1.0.0",
   "description": "Horitculture Site",
-  "main": "index.js",
+  "main": "node_modeules/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
