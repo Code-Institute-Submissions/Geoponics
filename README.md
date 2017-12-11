@@ -17,18 +17,10 @@ The site will be made using an Angular framework as well as bootstrap and jquery
 ## Features
  
 ### Existing Features
-- None yet!
- 
-### Pages/Features Left to Implement
-- Homepage
-- Gallery
-	- Photo filters by date/project/random
-- Past Projects
-	- Bootstrap Tabs
-- Workshops
-	- Current Running Workshops
-- Booking
-	- Forms allowing user to choose length of sessions, length of whole course, age range of students 
+- Home page with broad information about the project and its aims.
+- A gallery page with an infinite scrolling image feature, which uses a limited selection of images at the moment.
+- A Workshops page which includes lots of information on the different activites available with the organisation.
+- A booking page whre users can leave a message with the site with contact details and other info. 
  
 ## Tech Used
 
