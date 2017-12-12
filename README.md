@@ -52,7 +52,3 @@ The site will be made using an Angular framework as well as bootstrap and jquery
 5. Once **http-server** is installed run ```http-server -c-1```
 6. The project will now run on [localhost](http://127.0.0.1:8080)
 7. Make changes to the code and if you think it belongs in here then just submit a pull request
-
-### Problems
-
-currently the github pages version doesn't work correctly due to problems with the angular routing, the JS, CSS and other files as well as templates return 404 errors.
