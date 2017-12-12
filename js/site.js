@@ -4,19 +4,19 @@ angular.module('Geoponics').config(function($locationProvider, $routeProvider) {
 
     $locationProvider.html5Mode(true);  // Enable href routing without hashes
  
-    $routeProvider.when('.', {
+    $routeProvider.when('/', {
         templateUrl: 'templates/home.html', 
         controller: 'HomeController'
     })
-    .when('gallery', {
+    .when('/gallery', {
         templateUrl: 'templates/gallery.html', 
         controller: 'GalleryController'
     })
-    .when('workshops', {
+    .when('/workshops', {
         templateUrl: 'templates/workshops.html', 
         controller: 'WorkshopController'
     })
-     .when('booking', {
+     .when('/booking', {
         templateUrl: 'templates/booking.html', 
         controller: 'BookingController'
     });
