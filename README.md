@@ -52,3 +52,7 @@ The site will be made using an Angular framework as well as bootstrap and jquery
 5. Once **http-server** is installed run ```http-server -c-1```
 6. The project will now run on [localhost](http://127.0.0.1:8080)
 7. Make changes to the code and if you think it belongs in here then just submit a pull request
+
+### problems
+
+due to the way angular routing works i could not get links in my home.html to work even though they are coded the same way angular describes in my index.html file.
