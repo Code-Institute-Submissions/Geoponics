@@ -27,7 +27,7 @@ To keep the workshop screen simple and easily acessible i implemented a text sea
 The color scheme was chosen to be neutral, simple and work well with the kind of natural plant pictures that would be found on the site.
 The images from the gallery and workshops page are images taken from google. However the macro-images used for the Homepage and headers were specially taken to all have the same style and tie the website together.
 
-The UX was designed so that the user would find the website's homepage, be searching or having it saved. If they are a newcomer to the site, they will hopefully read through the hompage's info on what Geoponics does as an organisation. If they are interested the links at the bottom will allow them to navigate to the part of the site where they feel they need more info, the gallery or workshops page. If the visited the site then they will use the navbar to traverse to an area of the site they have previously used, i.e booking or the workshop page to book again.
+The UX was designed so that the user would find the website's homepage, be searching or having it saved. If they are a newcomer to the site, they will hopefully read through the hompage's info on what Geoponics does as an organisation. If they are interested the links at the bottom will allow them to navigate to the part of the site where they feel they need more info, the gallery or workshops page. Users who have already the visited the site before will use the navbar from the homepage to traverse to an area of the site they have previously used, i.e booking or the workshop page to book again.
 
 ## Features
  
