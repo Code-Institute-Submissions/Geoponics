@@ -39,7 +39,7 @@ The UX was designed so that the user would find the website's homepage, be searc
  
 ## Tech Used
 
-### Some the tech used includes:
+### Some of the tech used includes:
 - [AngularJS](https://angularjs.org/)
     - We use **AngularJS** to handle page routing, we also use it to make calls to the REST API and build custom directives
 - [Bootstrap](http://getbootstrap.com/)
