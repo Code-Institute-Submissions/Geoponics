@@ -67,6 +67,21 @@ The UX was designed so that the user would find the website's homepage, be searc
 5. Once **http-server** is installed run ```http-server -c-1```
 6. The project will now run on [localhost](http://127.0.0.1:8080)
 7. Make changes to the code and if you think it belongs in here then just submit a pull request
+ 
+### Deployment
+
+Deployment to Github pages shouldnt be simple, after signing up for github pages, choose the repository you've named for this project.
+
+Then using the command line navigate to the project root folder, run
+```
+git init
+```
+then
+```
+git checkout -b gh-pages
+```
+
+Github pages expects to find the project in a branch called gh-pages, but can also use the master, it is best to use the gh-pages branch, there you can make the necessary changes to the angular routing of the templates.
 
 ### problems
 
