@@ -87,7 +87,7 @@ Github pages expects to find the project in a branch called gh-pages, but can al
 
 ### References
 
-Lot's of the code was influenced by learning on the LMS as well as asking questions or solutions to them found on stack overflow and it was a great help in completing this project.
+Lot's of the code was influenced by learning on the LMS as well as asking questions or solutions to them found on stack overflow and slack, it was a great help in completing this project.
 
 ### problems
 
