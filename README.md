@@ -85,14 +85,26 @@ git checkout -b gh-pages
 
 Github pages expects to find the project in a branch called gh-pages, but can also use the master, it is best to use the gh-pages branch, there you can make the necessary changes to the angular routing of the templates.
 
+Once you have created a this new branch its necessary to change the angular routing for use on git-hub pages. Using $routeprovider in Html5 mode means we change the way we target href links, in the html file we remove the leading slash from all the pages, and replace the single forward slash for the homepage with full-stop symbol, for example:
+
+```
+href="<a href="." class="navelement">Home</a>"
+<a href="booking" class="navelement">Booking</a>"
+```
+These are absolute links are necessary for them to work online. I also add a 404.html which is a standard html form and create some scripts tags, inside we put the following:
+```
+window.location = '/<git-hub-repository-name>/';
+```
+Because pages cannot currently be refreshed they will display a 404 error instead. By creating my own with necessary JS, the 404 will re-direct back to the hompage, giving a less jarring user experience.
+
 ### References
 
 Lot's of the code was influenced by learning on the LMS as well as asking questions or solutions to them found on stack overflow and slack, it was a great help in completing this project.
 
 ### Issues and Testing.
 
-Due to the way angular routing works I had quite lot of trouble getting my different versions of this project working, as the local version will not run correctly on git-hub pages. After asking on stack overflow and on slack, people directed me towards some good info on angular and i was able to fix my issues with the links im my project.
+The most difficult part of this project was using angular for the front-end framework, due to the way angular routing works I had quite lot of trouble getting my different versions of this project working, as the local version will not run correctly on git-hub pages. After asking on stack overflow and on slack, people directed me towards some good info on angular and i was able to fix my issues with the links im my project.
 
-The most difficult part of this project was learning angular, its quirks and the fact that it needs extra dependencies such as angular-bootstrap.
+As well as issues uploading I had difficulty using certain bootstrap elements, where angular needs its own version of bootstrap.
 
 One other strange issue i came across was having downloaded jpg files whhere the .jpg was capitalised for some reason (i.e .JPG). After realizing and changing the file endings, they still did not work after pushing to git-hub, it took me a while to realize github does not recognise changing file endings as a commitable change, and the dev tools in chrome made the file endings lowercase even if they weren't. it took a long time to realize this issue but solving it was a great relief.
